@@ -15,6 +15,7 @@ import dev.mniak.apps.anniversary.ApplicationConstants
 import dev.mniak.apps.anniversary.R
 import dev.mniak.apps.anniversary.databinding.ActivityWidgetConfigurationBinding
 import dev.mniak.apps.anniversary.recyclerview.adapter.ColorsRecyclerViewAdapter
+import dev.mniak.apps.anniversary.util.DateCount
 import dev.mniak.apps.anniversary.viewmodel.WidgetParametersViewModel
 import dev.mniak.apps.anniversary.widget.updateAppWidget
 import java.util.Calendar
@@ -128,7 +129,7 @@ class DayOfYearWidgetConfigureActivity : AppCompatActivity() {
     }
 
     private fun initElements() {
-        viewBinding.dayPreviewText.text = GregorianCalendar.getInstance().get(Calendar.DAY_OF_YEAR).toString()
+        viewBinding.dayPreviewText.text = DateCount.getCount()
         viewBinding.customizationForm.visibility = if (viewBinding.themeSwitch.isChecked) View.GONE else View.VISIBLE
 
         viewBinding.themeSwitch.setOnCheckedChangeListener { _, isChecked ->

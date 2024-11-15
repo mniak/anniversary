@@ -14,6 +14,7 @@ import android.widget.Toast
 import dev.mniak.apps.anniversary.ApplicationConstants
 import dev.mniak.apps.anniversary.R
 import dev.mniak.apps.anniversary.service.ApplicationToolsStatusService
+import dev.mniak.apps.anniversary.util.DateCount
 import java.util.Calendar
 import java.util.GregorianCalendar
 
@@ -107,7 +108,7 @@ open class DayOfYearWidget : AppWidgetProvider() {
             clipboard.setPrimaryClip(
                 ClipData.newPlainText(
                     context.getString(R.string.clipboard_day_of_year_label),
-                    GregorianCalendar.getInstance().get(Calendar.DAY_OF_YEAR).toString()
+                    DateCount.getCount()
                 )
             )
             Toast.makeText(
@@ -151,7 +152,7 @@ internal fun updateAppWidget(
     )
     remoteView.setTextViewText(
         R.id.widget_text,
-        GregorianCalendar.getInstance().get(Calendar.DAY_OF_YEAR).toString()
+        DateCount.getCount()
     )
 
     val options = appWidgetManager.getAppWidgetOptions(appWidgetId)
