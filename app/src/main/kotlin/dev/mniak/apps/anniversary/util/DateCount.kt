@@ -15,7 +15,7 @@ class DateCount {
             val today = LocalDate.now();
             val theDate = LocalDate.of(2025,1,14)
 
-            val interval = ChronoUnit.DAYS.between(today, theDate)
+            val interval = ChronoUnit.DAYS.between(theDate, today)
             return interval.toString()
         }
     }
