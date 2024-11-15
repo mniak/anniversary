@@ -7,7 +7,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "by.liauko.siarhei.app.today"
+        applicationId "dev.mniak.apps.anniversary"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 11
@@ -38,7 +38,7 @@ android {
     buildFeatures {
         viewBinding true
     }
-    namespace 'by.liauko.siarhei.app.today'
+    namespace 'dev.mniak.apps.anniversary'
 }
 
 dependencies {

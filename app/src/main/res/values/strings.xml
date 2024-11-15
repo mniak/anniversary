@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Today</string>
+    <string name="app_name" translatable="false">Anniversary</string>
 
     <string name="today_is_text">Today is</string>
     <string name="clipboard_day_of_year_label" translatable="false">current_day_of_the_year</string>
