@@ -11,12 +11,12 @@ import java.util.GregorianCalendar
 
 class DateCount {
     companion object {
-        fun getCount(): String {
+        fun getCount(): Int {
             val today = LocalDate.now();
             val theDate = LocalDate.of(2025,1,14)
 
             val interval = ChronoUnit.DAYS.between(theDate, today)
-            return interval.toString()
+            return interval.toInt()
         }
     }
 }

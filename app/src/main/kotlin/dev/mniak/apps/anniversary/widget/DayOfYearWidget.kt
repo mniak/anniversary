@@ -108,7 +108,7 @@ open class DayOfYearWidget : AppWidgetProvider() {
             clipboard.setPrimaryClip(
                 ClipData.newPlainText(
                     context.getString(R.string.clipboard_day_of_year_label),
-                    DateCount.getCount()
+                    DateCount.getCount().toString()
                 )
             )
             Toast.makeText(
@@ -152,7 +152,7 @@ internal fun updateAppWidget(
     )
     remoteView.setTextViewText(
         R.id.widget_text,
-        DateCount.getCount()
+        DateCount.getCount().toString()
     )
 
     val options = appWidgetManager.getAppWidgetOptions(appWidgetId)

@@ -35,7 +35,7 @@ object NotificationUtil {
      * @since 1.0.0
      */
     fun createDayOfYearNotification(context: Context): Notification {
-        val currentDay = GregorianCalendar.getInstance().get(Calendar.DAY_OF_YEAR)
+        val currentDay = DateCount.getCount().toString()
         val bitmap = createBitmapFromText(currentDay.toString())
 
         return when {

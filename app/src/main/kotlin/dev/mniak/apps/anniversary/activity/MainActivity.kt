@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dev.mniak.apps.anniversary.R
 import dev.mniak.apps.anniversary.databinding.ActivityMainBinding
+import dev.mniak.apps.anniversary.util.DateCount
 import java.text.DateFormat
 import java.util.Calendar
 import java.util.Date
@@ -95,7 +96,7 @@ class MainActivity : AppCompatActivity() {
 
         val showTotalDays = sharedPreferences.getBoolean(getString(R.string.total_days_key), false)
 
-        val currentDay = GregorianCalendar.getInstance().get(Calendar.DAY_OF_YEAR)
+        val currentDay = DateCount.getCount()
         val lastDayOfYear = GregorianCalendar.getInstance().getActualMaximum(Calendar.DAY_OF_YEAR)
         if (showTotalDays) {
             viewBinding.dayOfYearText.text = getString(R.string.total_days_format, currentDay, lastDayOfYear)

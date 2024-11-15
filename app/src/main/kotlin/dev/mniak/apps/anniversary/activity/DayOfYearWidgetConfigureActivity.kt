@@ -129,7 +129,7 @@ class DayOfYearWidgetConfigureActivity : AppCompatActivity() {
     }
 
     private fun initElements() {
-        viewBinding.dayPreviewText.text = DateCount.getCount()
+        viewBinding.dayPreviewText.text = DateCount.getCount().toString()
         viewBinding.customizationForm.visibility = if (viewBinding.themeSwitch.isChecked) View.GONE else View.VISIBLE
 
         viewBinding.themeSwitch.setOnCheckedChangeListener { _, isChecked ->
